@@ -12,7 +12,6 @@ from nnunetv2.inference.predict_from_raw_data import nnUNetPredictor
 from nnunetv2.imageio.simpleitk_reader_writer import SimpleITKIO
 
 def run():
-    # Process the inputs: any way you'd like
     _show_torch_cuda_info()
     
     nnUNet_results = "/opt/app/nnUNet/nnUNet_results"
