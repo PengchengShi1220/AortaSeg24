@@ -1,0 +1,10 @@
+#!/bin/bash
+nnUNetv2_plan_and_preprocess -d 824 -c "3d_fullres"
+
+# nnUNetv2:
+CUDA_VISIBLE_DEVICES=0 nnUNetv2_train Dataset824_AortaSeg24_CTA_50 3d_fullres 0 -tr nnUNetTrainer_Hierarchical_CBDC_AortaSeg23_NoMirroring_500epochs --c
+CUDA_VISIBLE_DEVICES=0 nnUNetv2_train Dataset824_AortaSeg24_CTA_50 3d_fullres 1 -tr nnUNetTrainer_Hierarchical_CBDC_AortaSeg23_NoMirroring_500epochs --c
+CUDA_VISIBLE_DEVICES=0 nnUNetv2_train Dataset824_AortaSeg24_CTA_50 3d_fullres 2 -tr nnUNetTrainer_Hierarchical_CBDC_AortaSeg23_NoMirroring_500epochs --c
+CUDA_VISIBLE_DEVICES=0 nnUNetv2_train Dataset824_AortaSeg24_CTA_50 3d_fullres 3 -tr nnUNetTrainer_Hierarchical_CBDC_AortaSeg23_NoMirroring_500epochs --c
+CUDA_VISIBLE_DEVICES=0 nnUNetv2_train Dataset824_AortaSeg24_CTA_50 3d_fullres 4 -tr nnUNetTrainer_Hierarchical_CBDC_AortaSeg23_NoMirroring_500epochs --c
+CUDA_VISIBLE_DEVICES=0 nnUNetv2_train Dataset824_AortaSeg24_CTA_50 3d_fullres all -tr nnUNetTrainer_Hierarchical_CBDC_AortaSeg23_NoMirroring_500epochs --c
