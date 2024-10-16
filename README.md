@@ -1,4 +1,4 @@
-# [AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/).
+# [AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/)
 ## Installation and Usage Guide
 
 ### Step 1: Installation
