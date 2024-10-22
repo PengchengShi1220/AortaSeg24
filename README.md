@@ -39,3 +39,35 @@ To save your Docker container following inference, execute the following command
 ```
 bash save.sh
 ```
+
+## Citation
+```
+@article{shi2023nextou,
+  title={NexToU: Efficient Topology-Aware U-Net for Medical Image Segmentation},
+  author={Shi, Pengcheng and Guo, Xutao and Yang, Yanwu and Ye, Chenfei and Ma, Ting},
+  journal={arXiv preprint arXiv:2305.15911},
+  year={2023}
+}
+```
+```
+@inproceedings{shi2024centerline,
+  title={Centerline Boundary Dice Loss for Vascular Segmentation},
+  author={Shi, Pengcheng and Hu, Jiesi and Yang, Yanwu and Gao, Zilve and Liu, Wei and Ma, Ting},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={46--56},
+  year={2024},
+  organization={Springer}
+}
+```
+```
+@article{isensee2021nnu,
+  title={nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation},
+  author={Isensee, Fabian and Jaeger, Paul F and Kohl, Simon AA and Petersen, Jens and Maier-Hein, Klaus H},
+  journal={Nature methods},
+  volume={18},
+  number={2},
+  pages={203--211},
+  year={2021},
+  publisher={Nature Publishing Group}
+}
+```
