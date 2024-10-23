@@ -1,4 +1,13 @@
 # [AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/)
+
+## Dependencies
+
+This project makes use of the following main resources. Please refer to their GitHub repositories for more details:
+
+- [nnU-Net](https://github.com/MIC-DKFZ/nnUNet)
+- [NexToU](https://github.com/PengchengShi1220/NexToU)
+- [cbDice](https://github.com/PengchengShi1220/cbDice)
+
 ## Installation and Usage Guide
 
 ### Step 1: Installation
