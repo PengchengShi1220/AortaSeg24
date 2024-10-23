@@ -116,7 +116,7 @@ def run():
     
     #print("props: ", props)
     
-    a = 2.0 # scaling factor for roi
+    m = 2.0 # scaling factor for roi
 
     non_zero_indices = np.argwhere(pred_array > 0)
 
@@ -129,10 +129,10 @@ def run():
     y_center = (y_min + y_max) / 2
     z_center = (z_min + z_max) / 2
 
-    # Calculate the new radius range after scaling by factor `a`
-    x_range = (x_max - x_min + 1) * a / 2
-    y_range = (y_max - y_min + 1) * a / 2
-    z_range = (z_max - z_min + 1) * a / 2
+    # Calculate the new radius range after scaling by factor `m`
+    x_range = (x_max - x_min + 1) * m / 2
+    y_range = (y_max - y_min + 1) * m / 2
+    z_range = (z_max - z_min + 1) * m / 2
     
     #print("x_range, y_range, z_range: ", x_range, y_range, z_range)
     
