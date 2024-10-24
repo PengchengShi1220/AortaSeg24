@@ -8,6 +8,8 @@ This project makes use of the following main resources. Please refer to their Gi
 - [NexToU](https://github.com/PengchengShi1220/NexToU)
 - [cbDice](https://github.com/PengchengShi1220/cbDice)
 
+Please note that the hierarchical semantic loss will be added in the upcoming [NexToU](https://github.com/PengchengShi1220/NexToU) version, along with an updated loss function and a paper to be submitted to [arXiv](https://arxiv.org/abs/2305.15911).
+
 ## Installation and Usage Guide
 
 ### Step 1: Installation
