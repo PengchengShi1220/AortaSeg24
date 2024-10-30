@@ -1,5 +1,9 @@
 # [AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/)
 
+### 📰 News
+- **October 30, 2024**: 🥈 Achieved **2nd place** in the Final Test Phase! [View official rankings](https://grand-challenge.org/forums/forum/multi-class-segmentation-of-aortic-branches-and-zones-in-cta-726/topic/challenge-final-rankings-2826/)
+- **October 10, 2024**: The complete code for the [AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/) Final Test Phase is now available.
+
 ## Dependencies
 
 This project makes use of the following main resources. Please refer to their GitHub repositories for more details:
