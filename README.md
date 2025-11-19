@@ -9,10 +9,10 @@
 This project makes use of the following main resources. Please refer to their GitHub repositories for more details:
 
 - [nnU-Net](https://github.com/MIC-DKFZ/nnUNet)
-- [NexToU](https://github.com/PengchengShi1220/NexToU)
+- [fractal softmax](https://github.com/PengchengShi1220/fractal-softmax)
 - [cbDice](https://github.com/PengchengShi1220/cbDice)
 
-Please note that the hierarchical semantic loss will be added in the upcoming [NexToU](https://github.com/PengchengShi1220/NexToU) version, along with an updated loss function and a paper to be submitted to [arXiv](https://arxiv.org/abs/2305.15911).
+Please note that the hierarchical semantic loss will be added in the [fractal softmax](https://github.com/PengchengShi1220/fractal-softmax).
 
 ## Installation and Usage Guide
 
@@ -57,11 +57,14 @@ bash save.sh
 
 ## Citation
 ```
-@article{shi2023nextou,
-  title={NexToU: Efficient Topology-Aware U-Net for Medical Image Segmentation},
-  author={Shi, Pengcheng and Guo, Xutao and Yang, Yanwu and Ye, Chenfei and Ma, Ting},
-  journal={arXiv preprint arXiv:2305.15911},
-  year={2023}
+@misc{shi2025hierarchicalsemanticlearningmulticlass,
+      title={Hierarchical Semantic Learning for Multi-Class Aorta Segmentation}, 
+      author={Pengcheng Shi},
+      year={2025},
+      eprint={2511.14187},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2511.14187}, 
 }
 ```
 ```
