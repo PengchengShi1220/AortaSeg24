@@ -1,8 +1,24 @@
 # [AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/)
 
+[![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Model-yellow.svg)](https://huggingface.co/spc819/AortaSeg24)
+[![Paper](https://img.shields.io/badge/Paper-Arxiv-b31b1b.svg)](https://arxiv.org/abs/2511.14187)
+
 ### 📰 News
 - **October 30, 2024**: 🥈 Achieved **2nd place** in the Final Test Phase! [View official rankings](https://grand-challenge.org/forums/forum/multi-class-segmentation-of-aortic-branches-and-zones-in-cta-726/topic/challenge-final-rankings-2826/)
 - **October 10, 2024**: The complete code for the [AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/) Final Test Phase is now available.
+- **October 19, 2026**: 🤗 Pretrained weights of the final-phase solution (Dataset824 `3d_fullres` folds 0–4 + `all`, Dataset825 `3d_lowres` fold 0 + `all`) are released on [Hugging Face: spc819/AortaSeg24](https://huggingface.co/spc819/AortaSeg24).
+
+## Pretrained Weights
+
+The trained checkpoints of the final-phase solution are available on Hugging Face:
+**[spc819/AortaSeg24](https://huggingface.co/spc819/AortaSeg24)**.
+The repository mirrors the `nnUNet_results` layout, so it can be downloaded directly there:
+
+```bash
+hf download spc819/AortaSeg24 --repo-type model --local-dir $nnUNet_results
+```
+
+With the weights in place, skip training and go straight to [Step 3: Inference](#step-3-inference).
 
 ## Dependencies
 
