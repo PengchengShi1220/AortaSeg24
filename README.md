@@ -10,15 +10,45 @@
 
 ## Pretrained Weights
 
-The trained checkpoints of the final-phase solution are available on Hugging Face:
+The trained checkpoints of the final-phase solution are released on Hugging Face:
 **[spc819/AortaSeg24](https://huggingface.co/spc819/AortaSeg24)**.
-The repository mirrors the `nnUNet_results` layout, so it can be downloaded directly there:
+
+The two models used by `inference.py` correspond to the following folders:
+
+| Path under `nnUNet_results/` | Stage | Configuration | Classes | Folds released |
+|---|---|---|---|---|
+| `Dataset825_AortaSeg24_CTA_bin_50/nnUNetTrainer_CE_DC_CBDC_NoMirroring_500epochs__nnUNetPlans__3d_lowres` | 1 — aorta localization | `3d_lowres` | 2 (aorta + background) | `fold_0`, `fold_all` |
+| `Dataset824_AortaSeg24_CTA_50/nnUNetTrainer_Hierarchical_CBDC_AortaSeg23_NoMirroring_500epochs__nnUNetPlans__3d_fullres` | 2 — multi-class segmentation | `3d_fullres` | 24 (23 aortic segments/zones + background) | `fold_0`–`fold_4`, `fold_all` |
+
+Each trainer folder ships `plans.json`, `dataset.json` and `dataset_fingerprint.json`, and each
+`fold_*` subfolder contains its `checkpoint_final.pth` — everything the predictor needs.
+Training logs and curve images are not included.
+
+`inference.py` loads exactly these two folders and uses `use_folds=(0, 'all')` for the
+low-resolution stage and `use_folds=(0, 1, 2, 3, 4, 'all')` for the full-resolution stage,
+so the released checkpoints cover the inference configuration as-is.
+
+### Download
 
 ```bash
 hf download spc819/AortaSeg24 --repo-type model --local-dir $nnUNet_results
 ```
 
-With the weights in place, skip training and go straight to [Step 3: Inference](#step-3-inference).
+The repository mirrors the `nnUNet_results` layout, so the `Dataset824_*` / `Dataset825_*`
+folders land exactly where `inference.py` expects them (`/opt/app/nnUNet/nnUNet_results`
+inside the container).
+
+With the weights in place, skip [Step 2](#step-2-model-training) and go straight to
+[Step 3: Inference](#step-3-inference).
+
+### Use with the code or the Docker build
+
+- **nnU-Net / Python**: point `nnUNet_results` (or the path hard-coded in `inference.py`)
+  at the download location and run `test_run.sh`.
+- **Docker**: the `Dockerfile` copies `Dataset824_AortaSeg24_CTA_50` and
+  `Dataset825_AortaSeg24_CTA_bin_50` from the build context into
+  `/opt/app/nnUNet/nnUNet_results/`, so the downloaded folders can be placed in the build
+  context next to the code and built directly.
 
 ## Dependencies
 
