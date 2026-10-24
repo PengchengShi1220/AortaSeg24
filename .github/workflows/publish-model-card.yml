@@ -1,0 +1,39 @@
+name: Publish model card to Hugging Face
+
+# Uploads .github/hf/model_card.md -> README.md and .github/hf/params.json -> params.json
+# of the Hugging Face model repo. Needed because huggingface.co is not reachable from the
+# development machine (SNI/DNS filtering); the GitHub runner has internet access.
+#
+# One-time setup: repository Settings -> Secrets and variables -> Actions -> New secret
+#   HF_TOKEN = <a Hugging Face token with write access to spc819/AortaSeg24>
+# Then: Actions -> "Publish model card to Hugging Face" -> Run workflow.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q huggingface_hub
+      - name: Upload model card and params.json
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os
+          from huggingface_hub import HfApi
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          rid = "spc819/AortaSeg24"
+          api.upload_file(path_or_fileobj=".github/hf/model_card.md", path_in_repo="README.md",
+                          repo_id=rid, repo_type="model",
+                          commit_message="Sync model card from GitHub (license + citation)")
+          api.upload_file(path_or_fileobj=".github/hf/params.json", path_in_repo="params.json",
+                          repo_id=rid, repo_type="model",
+                          commit_message="Sync params.json from GitHub (license + citation)")
+          print("uploaded to", rid)
+          PY
