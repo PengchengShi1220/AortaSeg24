@@ -5,9 +5,8 @@
 
 ### 📰 News
 - **October 30, 2024**: 🥈 Achieved **2nd place** in the Final Test Phase! [View official rankings](https://grand-challenge.org/forums/forum/multi-class-segmentation-of-aortic-branches-and-zones-in-cta-726/topic/challenge-final-rankings-2826/)
-- **October 10, 2024**: The complete code for the [AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/) Final Test Phase is now available.
 - **October 19, 2026**: 🤗 Pretrained weights of the final-phase solution (Dataset824 `3d_fullres` folds 0–4 + `all`, Dataset825 `3d_lowres` fold 0 + `all`) are released on [Hugging Face: spc819/AortaSeg24](https://huggingface.co/spc819/AortaSeg24).
-
+- **October 10, 2024**: The complete code for the [AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/) Final Test Phase is now available.
 ## Pretrained Weights
 
 The trained checkpoints of the final-phase solution are released on Hugging Face:
