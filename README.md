@@ -13,6 +13,9 @@
 The trained checkpoints of the final-phase solution are released on Hugging Face:
 **[spc819/AortaSeg24](https://huggingface.co/spc819/AortaSeg24)**.
 
+The **model weights are licensed under CC BY-NC-SA 4.0 (non-commercial)**; the code in this
+repository is Apache-2.0. See [License](#license).
+
 The two models used by `inference.py` correspond to the following folders:
 
 | Path under `nnUNet_results/` | Stage | Configuration | Classes | Folds released |
@@ -135,3 +138,16 @@ bash save.sh
   publisher={Nature Publishing Group}
 }
 ```
+
+## License
+
+- **Code** (this repository, including the customized nnU-Net, training and inference scripts):
+  **Apache License 2.0** — see [LICENSE](LICENSE).
+- **Pretrained model weights** ([Hugging Face: spc819/AortaSeg24](https://huggingface.co/spc819/AortaSeg24)):
+  **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
+  The checkpoints may be shared and adapted for non-commercial purposes provided that
+  attribution is given and derivatives are distributed under the same license.
+  Commercial use is not covered by this license.
+  See <https://creativecommons.org/licenses/by-nc-sa/4.0/>.
+
+Copyright 2024 Pengcheng Shi, Foundation Models Division, Medical Image Insights, Shanghai, China.
