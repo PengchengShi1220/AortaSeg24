@@ -105,14 +105,13 @@ bash save.sh
 
 ## Citation
 ```
-@misc{shi2025hierarchicalsemanticlearningmulticlass,
-      title={Hierarchical Semantic Learning for Multi-Class Aorta Segmentation}, 
-      author={Pengcheng Shi},
-      year={2025},
-      eprint={2511.14187},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2511.14187}, 
+@incollection{shi2024hierarchical,
+  title={Hierarchical Semantic Learning for Multi-class Aorta Segmentation},
+  author={Shi, Pengcheng},
+  booktitle={International Challenge on Multi-class Segmentation of the Aorta},
+  pages={12--22},
+  year={2024},
+  publisher={Springer}
 }
 ```
 ```
