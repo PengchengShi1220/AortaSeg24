@@ -141,13 +141,7 @@ bash save.sh
 
 ## License
 
-- **Code** (this repository, including the customized nnU-Net, training and inference scripts):
-  **Apache License 2.0** — see [LICENSE](LICENSE).
-- **Pretrained model weights** ([Hugging Face: spc819/AortaSeg24](https://huggingface.co/spc819/AortaSeg24)):
-  **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
-  The checkpoints may be shared and adapted for non-commercial purposes provided that
-  attribution is given and derivatives are distributed under the same license.
-  Commercial use is not covered by this license.
-  See <https://creativecommons.org/licenses/by-nc-sa/4.0/>.
-
-Copyright 2024 Pengcheng Shi, Foundation Models Division, Medical Image Insights, Shanghai, China.
+- **Code** (this repository): **Apache-2.0** — see [LICENSE](LICENSE).
+- **Model weights** ([Hugging Face](https://huggingface.co/spc819/AortaSeg24)):
+  **CC BY-NC-SA 4.0 (non-commercial)**; attribution required, derivatives under the same
+  license. See <https://creativecommons.org/licenses/by-nc-sa/4.0/>.
